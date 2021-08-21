@@ -1,5 +1,6 @@
 package java8.stream;
 
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,9 +11,9 @@ public class Map {
 
 	public static void main(String[] args) {
 		List<City> cities = new ArrayList<>();
-
-		List<Person> personList = List.of(new Person("Ajinkya", 31), new Person("Sonal", 30), new Person("Amol", 41),
-				new Person("Rekha", 36));
+		
+		List<Person> personList = StreamFromFile.getPersonList();
+		
 		cities.add(new City("Pune", List.of(new Person("Ajinkya", 31), new Person("Sonal", 30))));
 		cities.add(new City("Mumbai", List.of(new Person("Amol", 41), new Person("Rekha", 36))));
 
